@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pri-color : #032541;
+    --sec-color : #023056;
+    --tur-color : #173348;
+    --color-white : #fff;
+    --background-color : rgba(2, 47, 85, 0.7)
+}
+body{
+    background-color: var(--sec-color);
+}
+.header{
+    background-color: var(--pri-color);
+}
+.logo{
+    display: inline-block;
+    width: 200px;
+}
+.logo img{
+    width: 200px;
+}
+.movieCard{
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.movieCard img{
+    object-fit: cover;
+}
+.titleInfo, .hoverView{
+    position:absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    color: var(--color-white);
+    padding: 20px;    
+}
+.hoverView{
+    top: 101%;
+    transition: all 0.6s ease-in-out;
+}
+.movieCard:is(:hover,:active,:focus) .hoverView{
+    top: 30%;
+}
+
+
+
+
